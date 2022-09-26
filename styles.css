@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 #archive{
-    width:40%;
+    width:50%;
     padding: 0%;
     border-style: none;
 }
@@ -23,13 +23,10 @@
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
     position: relative;
-    right: -28%;
+    right: -25%;
     overflow:hidden;
-}
-#archive-content a{
-    width: 10%;
 }
 #timeline{
     width: 90%;
@@ -57,7 +54,8 @@
 .events{
     width: 80%;
     height: 120%;
-    min-height: 750px;
+    padding-top: 4%;
+    min-height: 1000px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -68,7 +66,7 @@
 }
 .card{
     height: 30%;
-    min-height: 225px;
+    min-height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,22 +89,46 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.card-contents h2{
+    height: 10%;
+}
 .card-contents p{
     min-height: 90px;
     height: 70%;
 }
-.card-contents button{
+.card-contents a{
     height: 10%;
     border-style: none;
     background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+.card-contents span{
+    display: flex;
+    flex-direction: row;
+}
+.card-contents span {
+    width: 10%;
+}
 @media (max-width:575px){
+    .events{
+        width: 70%;
+    }
+    .card{
+        flex-direction: column;
+    }
     .card img{
-        width: 40%;
-        padding-left: 7%;
+        width: 90%;
+        height: 40%;
+        padding: 5%;
     }
     .card-contents{
-        font-size: medium;
+        width: 100%;
+        font-size: x-small;
     }
+    .card-contents h{
+        height: 5%;
+    }
+
 }
