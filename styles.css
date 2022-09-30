@@ -52,20 +52,23 @@
     border-color: blue;
 }
 .events{
-    width: 80%;
+    width: 100%;
     height: 120%;
     padding-top: 4%;
+    padding-bottom: 4%;
+    min-width: 400px;
     min-height: 1000px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 1%;
-    position: relative;
-    left: 10%;
+    align-items: center;
 }
 .card{
+    width: 90%;
     height: 30%;
+    min-width: 300px;
     min-height: 100px;
     display: flex;
     flex-direction: row;
@@ -73,6 +76,9 @@
     background-color: #def2f1;
     border-bottom-right-radius: 25px;
     box-shadow:5px 10px #012d6c;
+}
+.card:hover{
+    box-shadow: 0px 0px;
 }
 .card img{
     padding-left: 10%;
@@ -90,7 +96,10 @@
     justify-content: space-between;
 }
 .card-contents h2{
+    padding-bottom: 1%;
     height: 10%;
+    border-bottom-style: solid;
+    border-bottom-color: #012d6c;
 }
 .card-contents p{
     min-height: 90px;
@@ -111,12 +120,52 @@
 .card-contents span {
     width: 10%;
 }
-@media (max-width:575px){
+
+.other-events{
+    width: 80%;
+    height: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 0%;
+    position: relative;
+    left: 10%;
+}
+
+.other-card{
+    box-sizing: border-box;
+    width: 30%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    background-color: #def2f1;
+    border-bottom-right-radius: 25px;
+    box-shadow:5px 10px #012d6c;
+}
+
+.other-card .card-contents{
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+}
+
+.other-card .image{
+    width: 90%;
+    height: 50%;
+}
+
+@media (max-width:426px){
     .events{
         width: 70%;
+        left: 15%;
     }
     .card{
+        width: 85%;
         flex-direction: column;
+        position: relative;
+        left: 2%;
     }
     .card img{
         width: 90%;
@@ -130,5 +179,27 @@
     .card-contents h{
         height: 5%;
     }
-
+    .other-events{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 400px;
+        min-height: 1000px;
+        left: 5%;
+    }
+    .other-card{
+        min-width: 300px;
+        min-height: 250px;
+        max-height: 300px;
+    }
+    .other-card .image{
+        height: 60%;
+        padding: 4%;
+    }
+    .other-card .card-contents{
+        padding: 0%;
+    }
+    .other-card .card-contents p{
+        height: 80%;
+    }
 }
