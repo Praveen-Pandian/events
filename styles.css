@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     margin: 0%;
+    box-sizing: border-box;
 }
 .navbar{
     width: 100%;
@@ -13,7 +14,7 @@
     overflow: hidden;
 }
 #archive{
-    width:50%;
+    width:10%;
     padding: 0%;
     border-style: none;
 }
@@ -30,45 +31,46 @@
 }
 #timeline{
     width: 90%;
-    height: 5%;
+    height: 10%;
     min-height: 30px;
     padding-top: 1%;
     padding-bottom: 1%; 
     border-bottom: 2%;
     border-style: solid;
+    border-width: 10px;
     border-color: white ;
     border-bottom-color: #012d6c;
     margin: 1%;
 }
 .title{
+    background-color: #012d6c;
     width: 100%;
-    height: 5%;
+    height: 10%;
+    color: white;
+    font-size: xx-large;
     min-height: 30px;
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
-    border-top:1%;
-    border-style: solid;
-    border-color: blue;
 }
 .events{
     width: 100%;
     height: 120%;
     padding-top: 4%;
     padding-bottom: 4%;
-    min-width: 400px;
+    min-width: 350px;
     min-height: 1000px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1%;
+    margin: 0%;
     align-items: center;
 }
 .card{
     width: 90%;
     height: 30%;
-    min-width: 300px;
+    min-width: 250px;
     min-height: 100px;
     display: flex;
     flex-direction: row;
@@ -80,10 +82,11 @@
 .card:hover{
     box-shadow: 0px 0px;
 }
-.card img{
-    padding-left: 10%;
+.card .image{
     width: 30%;
     height: 100%;
+    position: relative;
+    left: 10%;
 }
 .card-contents{
     width: 50%;
@@ -96,67 +99,71 @@
     justify-content: space-between;
 }
 .card-contents h2{
-    padding-bottom: 1%;
+    padding-bottom: 5%;
     height: 10%;
     border-bottom-style: solid;
     border-bottom-color: #012d6c;
 }
 .card-contents p{
-    min-height: 90px;
+    min-height: 60px;
     height: 70%;
+    padding: 2%;
+    text-align: justify;
 }
 .card-contents a{
     height: 10%;
+    padding: 2%;
     border-style: none;
     background-color: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.card-contents span{
-    display: flex;
-    flex-direction: row;
-}
-.card-contents span {
-    width: 10%;
-}
-
-.other-events{
-    width: 80%;
-    height: 70%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 0%;
-    position: relative;
-    left: 10%;
-}
-
-.other-card{
-    box-sizing: border-box;
-    width: 30%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  
-    background-color: #def2f1;
-    border-bottom-right-radius: 25px;
-    box-shadow:5px 10px #012d6c;
-}
-
-.other-card .card-contents{
-    width: 100%;
-    height: 100%;
-    text-align: justify;
-}
-
-.other-card .image{
+#others{
     width: 90%;
     height: 50%;
+    position: relative;
+    left: 5%;
+    min-height: 500px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#other-card{
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#other-card .image{
+    width: 90%;
+    height: 50%;
+    padding: 4%;
+}
+
+#other-card .card-contents{
+    width: 100%;
+    height: 50%;
+    font-size: medium;
+}
+
+#other-card h2{
+    height: 17%;
+}
+#other-card .image{
+    left:5%;`
+}
+#other-card p,a{
+    padding: 1%;
+    padding-bottom: 5%;
 }
 
 @media (max-width:426px){
+    #timeline{
+        height: 5%;
+        padding-bottom: 10%;
+        margin-bottom: 3%;
+    }
     .events{
         width: 70%;
         left: 15%;
@@ -165,41 +172,51 @@
         width: 85%;
         flex-direction: column;
         position: relative;
-        left: 2%;
+        left: 6%;
     }
-    .card img{
+    .card .image{
         width: 90%;
-        height: 40%;
+        height: 50%;
         padding: 5%;
+        left: 5%;
     }
     .card-contents{
         width: 100%;
+        height: 50%;
         font-size: x-small;
     }
-    .card-contents h{
-        height: 5%;
+    .card-contents p{
+        height: 25%;
     }
-    .other-events{
+    .card-contents h2{
+        height: 10%;
+        padding-bottom: 8%;
+    }
+
+   
+}
+
+@media (max-width:755px){
+    #archive{
+        width: 25%;
+    }
+    #others{
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        min-width: 400px;
-        min-height: 1000px;
-        left: 5%;
+        min-height: 1200px;
+        height: 100%;
+        left: 0%;
     }
-    .other-card{
-        min-width: 300px;
-        min-height: 250px;
-        max-height: 300px;
+    #other-card{
+        width: 85%;
+        height: 30%; 
     }
-    .other-card .image{
-        height: 60%;
-        padding: 4%;
+    #other-card .card-contents{
+        font-size: small;
     }
-    .other-card .card-contents{
-        padding: 0%;
+    #other-card p{
+        height: 65%;
     }
-    .other-card .card-contents p{
-        height: 80%;
+    #other-card h2{
+        height: 1%;
     }
 }
