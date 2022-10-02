@@ -15,8 +15,13 @@
 }
 #archive{
     width:10%;
-    padding: 0%;
+    padding-top: 1.5%;
+    color: white;
     border-style: none;
+}
+#archive:hover{
+    background-color:#def2f1;
+    color: #012d6c;
 }
 #archive-content{
     width: 50%;
@@ -41,6 +46,8 @@
     border-color: white ;
     border-bottom-color: #012d6c;
     margin: 1%;
+    text-align: center;
+    font-size: xx-large;
 }
 .title{
     background-color: #012d6c;
@@ -79,9 +86,6 @@
     border-bottom-right-radius: 25px;
     box-shadow:5px 10px #012d6c;
 }
-.card:hover{
-    box-shadow: 0px 0px;
-}
 .card .image{
     width: 30%;
     height: 100%;
@@ -110,7 +114,7 @@
     padding: 2%;
     text-align: justify;
 }
-.card-contents a{
+/*.card-contents a{
     height: 10%;
     padding: 2%;
     border-style: none;
@@ -118,7 +122,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
+*/
 #others{
     width: 90%;
     height: 50%;
@@ -160,6 +164,48 @@
     padding-bottom:5% ;
 }
 
+
+.card a{
+    box-sizing: border-box;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    background-color: #012d6c;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 50%;
+}
+.card a{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+.card a::after{
+    display: flex;
+    content: '\f178';
+    font-family: FontAwesome;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+    left: 10%;
+    font-size: 18px;
+    opacity: 0;
+}
+.card a:hover{
+    text-indent: -30px;
+}
+.card a:hover::after{
+    opacity: 1;
+    text-indent:0px;
+}
+#other-card a{
+    left:25%
+}
+
 @media (max-width:426px){
     #timeline{
         height: 5%;
@@ -194,15 +240,20 @@
         height: 60%;
         padding-left: 2%;
     }
-    .card-contents a{
-        padding-bottom: 5%;
+    .card a{
+        padding-top: 3%;
+        left: 25%;
+    }
+    .more{
+        text-align: center;
+    }
+    .more:hover{
+        text-indent: -5px;
     }
     .card-contents h2{
         height: 10%;
         padding-bottom: 8%;
-    }
-
-   
+    }   
 }
 
 @media (max-width:755px){
@@ -235,3 +286,6 @@
         height: 1%;
     }
 }
+
+
+
