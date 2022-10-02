@@ -212,6 +212,9 @@
         padding-bottom: 10%;
         margin-bottom: 3%;
     }
+    #archive{
+        padding-top: 3%;
+    }
     .events{
         width: 70%;
         left: 15%;
@@ -243,12 +246,6 @@
     .card a{
         padding-top: 3%;
         left: 25%;
-    }
-    .more{
-        text-align: center;
-    }
-    .more:hover{
-        text-indent: -5px;
     }
     .card-contents h2{
         height: 10%;
